@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">ProjectSixDemo</string>
+    <string name="collapsingToolBar">Pune</string>
+    <string name="title_howToReach">How To Reach Pune</string>
+    <string name="title_hotel">Hotels In Pune</string>
+    <string name="title_Restaurants">Restaurants In Pune</string>
+    <string name="title_MapView">Map View of Pune</string>
+    <string name="AboutPune">About Pune</string>
+    <string name="AboutPuneInfo">It is also famous for its cultural perspective and currently, it is known as cultural capital of Maharashtra. Pune is known for some of its cultural activities such as classical music, spirituality, theater and cinema, sports, and literature and many more. It is also famous for its historical and religious perspective and there are many historical monuments and buildings that are some of the major attractions of Pune. Some of them are as The Aga Khan Palace, Dehu famous as the birth place of the well known poet saint Tukaram, National War Museum, Pataleshwar Cave Temple, Shaniwar Wada famous palace of the Peshwa Dynasty. The city is famous for its geographical conditions too. Its is located at an altitude of 560 meters above the sea level over the Deccan plateau. Its natural beauty and other factors lure large number of from India and abroad.As, the city is well connected to other major cities of India and abroad with the help of airways. Pune airport is situated around 10 km from the main city of Pune. Major Airlines cater their services from this airport. Visitors can reach to airport with the help of buses and taxis. For further information, they can visit MakeMyTrip.com. Various attractions in Pune are: Parvati Hill Temples,Shaniwar Wada,Bund Garden,Aga Khan Palace,Paragliding,Dehu,Katraj Snake Park,Osho Ashram,Shinde\'s Chhatri,Panshet Water Park,Mulshi Lake and Dam,Pataleshwar Caves,Saras Garden,St. Mary\'s Church,Horse Riding,David Synagogue,Tulsi Baug,Vishram Bagh Waada,Raj Dinakar Kelkar Museum,National War Museum,Mahatma Phule Museum,Tribal Museum,Pashan Lake,Chatushrungi Mata Temple,Parasailing,Sinhagarh Fort,Shivapur etc. Best time to go Pune is Jul - Feb.</string>
+
+    <string-array name="cardMenu">
+        <item>How to Reach</item>
+        <item>Hotels</item>
+        <item>Restaurants</item>
+        <item>Places To Visit</item>
+        <item>Night Life</item>
+        <item>Map View</item>
+    </string-array>
+    <string-array name="hotelNames">
+        <item>JW Marriot</item>
+        <item>Amanora The Fern</item>
+        <item>Marriot Suites</item>
+        <item>Raddison Blue</item>
+    </string-array>
+    <string-array name="hotelRatings">
+        <item>4.5*</item>
+        <item>4.2*</item>
+        <item>4.2*</item>
+        <item>3.9*</item>
+    </string-array>
+    <string-array name="hotelLatitudes">
+        <item name="JW Marriot">18.532142</item>
+        <item name="Amanora The Fern">18.518142</item>
+        <item name="Marriot Suites">18.533163</item>
+        <item name="Raddison Blue">18.553618</item>
+    </string-array>
+    <string-array name="hotelLongitudes">
+        <item name="JW Marriot">73.829931</item>
+        <item name="Amanora The Fern">73.941701</item>
+        <item name="Marriot Suites">73.910503</item>
+        <item name="Raddison Blue">73.937853</item>
+    </string-array>
+
+
+    <string-array name="restaurant">
+        <item>Incognito</item>
+        <item>Lemon Leaf</item>
+        <item>Post 91</item>
+        <item>Little Italy</item>
+        <item>Ban Tao</item>
+    </string-array>
+    <string-array name="restaurantRatings">
+        <item>4.1*</item>
+        <item>3.9*</item>
+        <item>4.2*</item>
+        <item>4.1*</item>
+        <item>4.5*</item>
+    </string-array>
+    <string-array name="restaurantLatitudes">
+        <item name="Incognito">18.5701</item>
+        <item name="Lemon Leaf">18.615532</item>
+        <item name="Post 91">18.5653</item>
+        <item name="Little Italy">18.5350</item>
+        <item name="Ban Tao">18.5540</item>
+    </string-array>
+    <string-array name="restaurantLongitudes">
+        <item name="Incognito">73.7745</item>
+        <item name="Lemon Leaf">73.751393</item>
+        <item name="Post 91">73.7742</item>
+        <item name="Little Italy">73.8382</item>
+        <item name="Ban Tao">73.9048</item>
+    </string-array>
+    <string-array name="placeNames">
+        <item>Dagaduseth Temple</item>
+        <item>Aga Khan Palace</item>
+        <item>ShaniwarWada</item>
+        <item>Rajgarh Fort</item>
+        <item>Lavasa</item>
+        <item>Lal Mahal</item>
+    </string-array>
+    <string-array name="placeRatings">
+        <item>4.1*</item>
+        <item>3.9*</item>
+        <item>4.2*</item>
+        <item>4.1*</item>
+        <item>4.5*</item>
+        <item>4.5*</item>
+    </string-array>
+    <string-array name="placeNamesLatitudes">
+    <item name="DagadusethTemple">18.5164</item>
+    <item name="Aga_Khan_Palace">18.5523</item>
+    <item name="ShaniwarWada">18.5196</item>
+    <item name="Rajgarh_Fort">18.246887</item>
+    <item name="Lavasa">18.411809</item>
+    <item name="Lal_Mahal">18.518940</item>
+    </string-array>
+    <string-array name="placeNamesLongitudes">
+    <item name="DagadusethTemple">73.8561</item>
+    <item name="Aga_Khan_Palace">73.9016</item>
+    <item name="ShaniwarWada">73.8554</item>
+    <item name="Rajgarh_Fort">73.682268</item>
+    <item name="Lavasa">73.506422</item>
+    <item name="Lal_Mahal">73.856573</item>
+    </string-array>
+    <string-array name="nightlifeNames">
+        <item>Area 51</item>
+        <item>Miami</item>
+        <item>Cafetoons</item>
+        <item>Stone Water Grill</item>
+    </string-array>
+    <string-array name="nightlifeRatings">
+        <item>4.1*</item>
+        <item>3.9*</item>
+        <item>4.2*</item>
+        <item>4.1*</item>
+    </string-array>
+    <string-array name="nightlifeNamesLatitudes">
+        <item name="Area_51">18.557583</item>
+        <item name="Miami">18.460694</item>
+        <item name="Cafetoons">18.516249</item>
+        <item name="Stone_Water_Grill">18.538890</item>
+    </string-array>
+    <string-array name="nightlifeNamesLongitudes">
+        <item name="Area_51">73.787809</item>
+        <item name="Miami">73.806554</item>
+        <item name="Cafetoons">73.879003</item>
+        <item name="Stone_Water_Grill">73.912785</item>
+    </string-array>
+
+
+
+    <string-array name="latitudes">
+        <item name="Punelat">18.5204</item>
+    </string-array>
+    <string-array name="longitudes">
+        <item name="Punelong">73.8567</item>
+    </string-array>
+    <string name="title_activity_places_to_visit">PlacesToVisitActivity</string>
+    <string name="title_Nightlife">Nightlife In Pune</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="ImageView">ImageView</string>
+</resources>
