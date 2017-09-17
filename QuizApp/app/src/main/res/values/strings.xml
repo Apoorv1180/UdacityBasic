@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="questionOne">What is meant by template parameter?</string>
+    <string name="questionOneOptionOne">It can be used to pass a type as argument</string>
+    <string name="questionOneOptionTwo">It can be used to evaluate a type</string>
+    <string name="questionOneOptionThree">It can of no return type</string>
+    <string name="questionOneOptionFour">None of the mentioned</string>
+    <string name="questionTwo">The operator used for dereferencing or indirection is ____</string>
+    <string name="questionTwoOptionOne">*</string>
+    <string name="questionTwoOptionTwo"><![CDATA[&]]></string>
+    <string name="questionTwoOptionThree"><![CDATA[->]]></string>
+    <string name="questionTwoOptionFour"><![CDATA[->>]]></string>
+    <string name="submit">Total Score</string>
+    <string name="questionThree">What is the output of this program?</string>
+    <string name="questionFour">Which of the following is a type of constructor?</string>
+    <string name="questionFourCheckBoxOne">Copy constructor</string>
+    <string name="questionFourcheckBoxTwo">Friend constructor</string>
+    <string name="questionFourCheckBoxThree">Default constructor</string>
+    <string name="questionFourCheckBoxFour">Parameterized constructor</string>
+    <string name="questionFive">Which of the following is not the member of class?</string>
+    <string name="questionFiveOptionTwo">Friend function</string>
+    <string name="questionFiveOptionOne">Static function</string>
+    <string name="questionFiveOptionThree">Const function</string>
+    <string name="questionFiveOptionFour">Virtual function</string>
+    <string name="ViewScore">View Score</string>
+    <string name="resetScore">Reset</string>
+</resources>

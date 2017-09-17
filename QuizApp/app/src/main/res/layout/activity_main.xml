@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        tools:context="com.example.android.quizapp.MainActivity">
+
+        <!--Question 1  Radio Button covered-->
+        <LinearLayout
+            style="@style/layoutDescription"
+            android:background="@android:color/darker_gray">
+
+
+            <TextView
+                android:id="@+id/questionOne"
+                style="@style/TextViewDescription"
+                android:text="@string/questionOne" />
+
+            <LinearLayout style="@style/InternalLayoutDescription" />
+
+            <RadioGroup
+                android:id="@+id/questionOneRadioGroup"
+                style="@style/RadioGroupDescription">
+
+                <RadioButton
+                    android:id="@+id/questionOneRadioButtonOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionOne"
+                    android:text="@string/questionOneOptionOne" />
+
+                <RadioButton
+                    android:id="@+id/questionOneRadioButtonTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionOne"
+                    android:text="@string/questionOneOptionTwo" />
+
+                <RadioButton
+                    android:id="@+id/questionOneRadioButtonThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionOne"
+                    android:text="@string/questionOneOptionThree" />
+
+                <RadioButton
+                    android:id="@+id/questionOneRadioButtonFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionOne"
+                    android:text="@string/questionOneOptionFour" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <!--Question 2  Radio Button covered-->
+        <LinearLayout
+            style="@style/layoutDescription"
+            android:background="@android:color/darker_gray">
+
+
+            <TextView
+                android:id="@+id/questionTwo"
+                style="@style/TextViewDescription"
+                android:text="@string/questionTwo" />
+
+            <LinearLayout
+                style="@style/InternalLayoutDescription"
+                android:layout_marginTop="5dp" />
+
+            <RadioGroup
+                android:id="@+id/questionTwoRadioGroup"
+                style="@style/RadioGroupDescription">
+
+                <RadioButton
+                    android:id="@+id/questionTwoRadioButtonOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionTwo"
+                    android:text="@string/questionTwoOptionOne" />
+
+                <RadioButton
+                    android:id="@+id/questionTwoRadioButtonTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionTwo"
+                    android:text="@string/questionTwoOptionTwo" />
+
+                <RadioButton
+                    android:id="@+id/questionTwoRadioButtonThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionTwo"
+                    android:text="@string/questionTwoOptionThree" />
+
+                <RadioButton
+                    android:id="@+id/questionTwoRadioButtonFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionTwo"
+                    android:text="@string/questionTwoOptionFour" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--Question 3  Image View and plain text answer Covered-->
+        <LinearLayout
+            style="@style/layoutDescription"
+            android:background="@android:color/darker_gray">
+
+            <TextView
+                android:id="@+id/questionThree"
+                style="@style/TextViewDescription"
+                android:text="@string/questionThree" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/questionThreeImageView"
+                    style="@style/ImageViewDescription"
+                    android:background="@drawable/questionthreeimageview" />
+
+                <EditText
+                    android:id="@+id/questionThreeEditText"
+                    style="@style/EditTextDescription"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Question 4  Check Box  covered-->
+        <LinearLayout
+            style="@style/layoutDescription"
+            android:background="@android:color/darker_gray">
+
+
+            <TextView
+                android:id="@+id/questionFour"
+                style="@style/TextViewDescription"
+                android:text="@string/questionFour" />
+
+            <LinearLayout style="@style/InternalLayoutDescription" />
+
+            <CheckBox
+                android:id="@+id/questionFourCheckBoxOne"
+                style="@style/CheckBoxDescription"
+                android:onClick="checkQuestionFourCheckBox"
+                android:text="@string/questionFourCheckBoxOne" />
+
+            <CheckBox
+                android:id="@+id/questionFourCheckBoxTwo"
+                style="@style/CheckBoxDescription"
+                android:onClick="checkQuestionFourCheckBox"
+                android:text="@string/questionFourcheckBoxTwo" />
+
+            <CheckBox
+                android:id="@+id/questionFourCheckBoxThree"
+                style="@style/CheckBoxDescription"
+                android:onClick="checkQuestionFourCheckBox"
+                android:text="@string/questionFourCheckBoxThree" />
+
+            <CheckBox
+                android:id="@+id/questionFourCheckBoxFour"
+                style="@style/CheckBoxDescription"
+                android:onClick="checkQuestionFourCheckBox"
+                android:text="@string/questionFourCheckBoxFour" />
+
+        </LinearLayout>
+
+        <!--Question 5  Radio Button covered-->
+        <LinearLayout
+            style="@style/layoutDescription"
+            android:background="@android:color/darker_gray">
+
+
+            <TextView
+                android:id="@+id/questionFive"
+                style="@style/TextViewDescription"
+                android:text="@string/questionFive" />
+
+            <LinearLayout style="@style/InternalLayoutDescription" />
+
+            <RadioGroup
+                android:id="@+id/questionFiveRadioGroup"
+                style="@style/RadioGroupDescription">
+
+                <RadioButton
+                    android:id="@+id/questionFiveRadioButtonOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionFive"
+                    android:text="@string/questionFiveOptionOne" />
+
+                <RadioButton
+                    android:id="@+id/questionFiveRadioButtonTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionFive"
+                    android:text="@string/questionFiveOptionTwo" />
+
+                <RadioButton
+                    android:id="@+id/questionFiveRadioButtonThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionFive"
+                    android:text="@string/questionFiveOptionThree" />
+
+                <RadioButton
+                    android:id="@+id/questionFiveRadioButtonFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="calculateQuestionFive"
+                    android:text="@string/questionFiveOptionFour" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <!--  Total Score and Reset Button covered-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/viewScore"
+                style="@style/ButtonDescription"
+                android:onClick="TotalScore"
+                android:text="@string/ViewScore" />
+
+            <Button
+                android:id="@+id/resetScore"
+                style="@style/ButtonDescription"
+                android:onClick="ResetScore"
+                android:text="@string/resetScore" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
