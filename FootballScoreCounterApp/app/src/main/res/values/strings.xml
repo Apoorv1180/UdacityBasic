@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FootballScoreCounter</string>
+    <string name="reset">Reset</string>
+    <string name="OnePoint">+1 Point</string>
+    <string name="TwoPoints">+2 Points</string>
+    <string name="ThreePoints">+3 Points</string>
+    <string name="SixPoints">+6 Points</string>
+    <string name="TeamB">Team B</string>
+    <string name="TeamA">Team A</string>
+</resources>
