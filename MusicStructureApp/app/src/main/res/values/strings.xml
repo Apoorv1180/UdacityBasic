@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MusicStructureApp</string>
+    <string name="title_activity_album">AlbumActivity</string>
+    <string name="song_1">Song_1</string>
+    <string name="song_2">Song_2</string>
+    <string name="song_3">Song_3</string>
+    <string name="song_4">Song_4</string>
+    <string name="artist_1">Artist_1</string>
+    <string name="artist_2">Artist_2</string>
+    <string name="album_1">Album_1</string>
+    <string name="album_2">Album_2</string>
+    <string name="albumFragmentTitle">Album</string>
+    <string name="artistFragmentTitle">Artist</string>
+    <string name="PlaylistFragmentTitle">Playlist</string>
+    <string name="songFragmentTitle">Song</string>
+    <string name="SongPlay">Play the song here!!</string>
+    <string name="playlist_1">Playlist_1</string>
+    <string name="playlist_2">Playlist_2</string>
+    <string name="MessageSongFragment">List of Songs displayed as List View.Tap on each item to play the song ! </string>
+    <string name="albumFragInfo">Displays the list of Albums as a card view inflated in recycler View.Tap on each item to know more.</string>
+    <string name="artistFragInfo">List of songs sorted by artist in recycler view.Tap each item to know more.</string>
+    <string name="PlaylistFragInfo">Displays songs as sorted by Playlist in recycler view.Tap to know more details.</string>
+    <string name="HomeFragmentTitle">Home</string>
+    <string name="confirm">Confirm</string>
+    <string name="payForSongs">Pay For New Songs</string>
+    <string name="messagePay">Click here to pay for your favorite song and buy it!!!</string>
+    <string name="messagePayConfirm">Once the payment is Confirmed using your token values the song will be added to the song listview</string>
+    <string name="messageAlbumInfo">Album Information for the artist name clicked on the list view Item.Click to know the songs available for the artist.</string>
+    <string name="messageAlbumArtistInfo">Displays the list view of all the songs available for the clicked album on the list view!</string>
+</resources>
