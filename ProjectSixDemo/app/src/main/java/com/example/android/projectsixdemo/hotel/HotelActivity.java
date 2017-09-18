@@ -14,7 +14,7 @@ public class HotelActivity extends AppCompatActivity {
     RecyclerView.Adapter adapter;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<Hotel> list = new ArrayList<Hotel>();
-    int[] imageId = {R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher, R.mipmap.ic_launcher};
+    int[] imageId = {R.drawable.jwmarriot, R.drawable.amanora, R.drawable.mariot_suites, R.drawable.raddison};
     String[] hotelNames, hotelRatings;
 
     @Override
