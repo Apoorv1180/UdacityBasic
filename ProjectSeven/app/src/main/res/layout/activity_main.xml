@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="2dp">
 
     <EditText
         android:id="@+id/searchKeyword"
@@ -20,8 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/search_button"
-        android:orientation="vertical"
-        />
+        android:orientation="vertical" />
 
     <TextView
         android:id="@+id/empty_view"

@@ -4,7 +4,7 @@ package com.example.android.projectseven;
 public class Book {
 
     /**
-     * Title of the earthquake event
+     * Title of the Book event
      */
     public final String title;
     public final String[] author;
