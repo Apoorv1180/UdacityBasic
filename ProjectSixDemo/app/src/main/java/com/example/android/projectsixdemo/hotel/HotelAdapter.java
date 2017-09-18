@@ -70,9 +70,9 @@ public class HotelAdapter extends RecyclerView.Adapter<HotelAdapter.hotelViewHod
             int position = getAdapterPosition();
             Hotel album = this.album.get(position);
             Intent intent = new Intent(ctx, MapsActivity.class);
-            intent.putExtra("HotelPosition", String.valueOf(position));
-            intent.putExtra("HotelName", album.getHotelName());
-            intent.putExtra("activity", "HotelActivity");
+            intent.putExtra(String.valueOf(R.string.HotelPosition), String.valueOf(position));
+            intent.putExtra(String.valueOf(R.string.HotelName), album.getHotelName());
+            intent.putExtra(String.valueOf(R.string.activity), String.valueOf(R.string.HotelActivity));
             ctx.startActivity(intent);
         }
     }

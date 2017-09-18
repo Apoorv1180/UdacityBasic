@@ -69,9 +69,9 @@ public class NightlifeAdapter extends RecyclerView.Adapter<NightlifeAdapter.Nigh
             int position = getAdapterPosition();
             NightLife album = this.album.get(position);
             Intent intent = new Intent(ctx, MapsActivity.class);
-            intent.putExtra("NightlifePosition", position);
-            intent.putExtra("NightlifeName", album.getHotelName());
-            intent.putExtra("activity", "NightLifeActivity");
+            intent.putExtra(String.valueOf(R.string.NightlifePosition), position);
+            intent.putExtra(String.valueOf(R.string.NightlifeName), album.getHotelName());
+            intent.putExtra(String.valueOf(R.string.activity), String.valueOf(R.string.NightLifeActivity));
             ctx.startActivity(intent);
         }
     }

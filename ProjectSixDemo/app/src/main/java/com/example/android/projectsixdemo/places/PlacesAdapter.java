@@ -15,7 +15,7 @@ import com.example.android.projectsixdemo.R;
 
 import java.util.ArrayList;
 
-public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesToVisitViewHoder> {
+public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesToVisitViewHolder> {
 
 
     public ArrayList<PlacesToVisit> mAlbum = new ArrayList<PlacesToVisit>();
@@ -27,14 +27,14 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesToVi
     }
 
     @Override
-    public PlacesToVisitViewHoder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PlacesToVisitViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotel_card_view, parent, false);
-        PlacesToVisitViewHoder albumHolder = new PlacesToVisitViewHoder(view, ctx, mAlbum);
+        PlacesToVisitViewHolder albumHolder = new PlacesToVisitViewHolder(view, ctx, mAlbum);
         return albumHolder;
     }
 
     @Override
-    public void onBindViewHolder(PlacesToVisitViewHoder holder, int position) {
+    public void onBindViewHolder(PlacesToVisitViewHolder holder, int position) {
         PlacesToVisit album = mAlbum.get(position);
         holder.albumImageView.setImageResource(album.getImageId());
         holder.albumName.setText(album.getHotelName());
@@ -47,13 +47,13 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesToVi
     }
 
 
-    public static class PlacesToVisitViewHoder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class PlacesToVisitViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView albumImageView;
         TextView albumName, rating;
         ArrayList<PlacesToVisit> album = new ArrayList<PlacesToVisit>();
         Context ctx;
 
-        public PlacesToVisitViewHoder(View itemView, Context ctx, ArrayList<PlacesToVisit> album) {
+        public PlacesToVisitViewHolder(View itemView, Context ctx, ArrayList<PlacesToVisit> album) {
             super(itemView);
             //register the onclick listener
             this.album = album;
@@ -69,9 +69,9 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesToVi
             int position = getAdapterPosition();
             PlacesToVisit album = this.album.get(position);
             Intent intent = new Intent(ctx, MapsActivity.class);
-            intent.putExtra("PlacePosition", position);
-            intent.putExtra("PlaceName", album.getHotelName());
-            intent.putExtra("activity", "PlacesToVisitActivity");
+            intent.putExtra(String.valueOf( R.string.PlacePosition), position);
+            intent.putExtra(String.valueOf( R.string.PlaceName), album.getHotelName());
+            intent.putExtra(String.valueOf( R.string.activity), String.valueOf( R.string.PlacesToVisitActivity));
             ctx.startActivity(intent);
         }
     }

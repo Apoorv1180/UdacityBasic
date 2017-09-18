@@ -48,9 +48,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         latNightlife = getResources().getStringArray(R.array.nightlifeNamesLatitudes);
         longtNightlife = getResources().getStringArray(R.array.nightlifeNamesLongitudes);
 
-        final String locationTag = getIntent().getStringExtra("activity");
+        final String locationTag = getIntent().getStringExtra(String.valueOf(R.string.activity));
 
-        if (locationTag.equals("MapsActivity")) {
+        if (locationTag.equals(String.valueOf(R.string.MapsActivity))) {
             setLatLongPune();
             setLatLongHotelPune();
             setLatLongRestaurantPune();
@@ -59,22 +59,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.moveCamera(CameraUpdateFactory.newLatLng(stationaryPosition));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(5.0f));
         }
-        if (locationTag.equals("HotelActivity")) {
+        if (locationTag.equals(String.valueOf(R.string.HotelActivity))) {
             setHotelLocation();
             mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(5.0f));
         }
-        if (locationTag.equals("RestaurantActivity")) {
+        if (locationTag.equals(String.valueOf(R.string.RestaurantActivity))) {
             setRestaurantLocation();
             mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(5.0f));
         }
-        if (locationTag.equals("PlacesToVisitActivity")) {
+        if (locationTag.equals(String.valueOf(R.string.PlacesToVisitActivity))) {
             setPlaceLocation();
             mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(5.0f));
         }
-        if (locationTag.equals("NightLifeActivity")) {
+        if (locationTag.equals(String.valueOf(R.string.NightLifeActivity))) {
             setNightlifeLocation();
             mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
             mMap.animateCamera(CameraUpdateFactory.zoomTo(5.0f));
@@ -82,8 +82,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void setHotelLocation() {
-        int position = getIntent().getIntExtra("HotelPosition", 00);
-        String hotelName = getIntent().getStringExtra("HotelName");
+        int position = getIntent().getIntExtra(String.valueOf(R.string.HotelPosition), 00);
+        String hotelName = getIntent().getStringExtra(getString(R.string.HotelName));
         location = new LatLng(Double.valueOf(latHotels[position]), Double.valueOf(longtHotels[position]));
         marker = new MarkerOptions().position(location).title(hotelName);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_hotel);
@@ -92,8 +92,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void setRestaurantLocation() {
-        int position = getIntent().getIntExtra("RestaurantPosition", 00);
-        String hotelName = getIntent().getStringExtra("RestaurantName");
+        int position = getIntent().getIntExtra(String.valueOf(R.string.RestaurantPosition), 00);
+        String hotelName = getIntent().getStringExtra(getString(R.string.RestaurantName));
         location = new LatLng(Double.valueOf(latRestaurants[position]), Double.valueOf(longtRestaurants[position]));
         marker = new MarkerOptions().position(location).title(hotelName);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_restaurant);
@@ -102,8 +102,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void setPlaceLocation() {
-        int position = getIntent().getIntExtra("PlacePosition", 00);
-        String hotelName = getIntent().getStringExtra("PlaceName");
+        int position = getIntent().getIntExtra(String.valueOf(R.string.PlacePosition), 00);
+        String hotelName = getIntent().getStringExtra(getString(R.string.PlaceName));
         location = new LatLng(Double.valueOf(latPlaces[position]), Double.valueOf(longtPlaces[position]));
         marker = new MarkerOptions().position(location).title(hotelName);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_placestovisit);
@@ -112,8 +112,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void setNightlifeLocation() {
-        int position = getIntent().getIntExtra("NightlifePosition", 00);
-        String hotelName = getIntent().getStringExtra("NightlifeName");
+        int position = getIntent().getIntExtra(String.valueOf(R.string.NightlifePosition), 00);
+        String hotelName = getIntent().getStringExtra(getString(R.string.NightlifeName));
         location = new LatLng(Double.valueOf(latNightlife[position]), Double.valueOf(longtNightlife[position]));
         marker = new MarkerOptions().position(location).title(hotelName);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_nightlife);
@@ -124,7 +124,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setLatLongPune() {
         for (int i = 0; i < latPune.length; i++) {
             location = new LatLng(Double.valueOf(latPune[i]), Double.valueOf(longtPune[i]));
-            marker = new MarkerOptions().position(location).title("Pune");
+            marker = new MarkerOptions().position(location).title(getString(R.string.Pune));
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_how_to_reach);
             marker.icon(icon);
             mMap.addMarker(marker);
@@ -134,7 +134,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setLatLongHotelPune() {
         for (int i = 0; i < latHotels.length; i++) {
             location = new LatLng(Double.valueOf(latHotels[i]), Double.valueOf(longtHotels[i]));
-            marker = new MarkerOptions().position(location).title("Hotels");
+            marker = new MarkerOptions().position(location).title(getString(R.string.Hotels));
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_hotel);
             marker.icon(icon);
             mMap.addMarker(marker);
@@ -144,7 +144,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setLatLongNightlifePune() {
         for (int i = 0; i < latNightlife.length; i++) {
             location = new LatLng(Double.valueOf(latNightlife[i]), Double.valueOf(longtNightlife[i]));
-            marker = new MarkerOptions().position(location).title("Nightlife");
+            marker = new MarkerOptions().position(location).title(getString(R.string.Nightlife));
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_nightlife);
             marker.icon(icon);
             mMap.addMarker(marker);
@@ -154,7 +154,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setLatLongRestaurantPune() {
         for (int i = 0; i < latRestaurants.length; i++) {
             location = new LatLng(Double.valueOf(latRestaurants[i]), Double.valueOf(longtRestaurants[i]));
-            marker = new MarkerOptions().position(location).title("Restaurant");
+            marker = new MarkerOptions().position(location).title(getString(R.string.Restaurant));
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_restaurant);
             marker.icon(icon);
             mMap.addMarker(marker);
@@ -164,7 +164,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void setLatLongPlacesPune() {
         for (int i = 0; i < latPlaces.length; i++) {
             location = new LatLng(Double.valueOf(latPlaces[i]), Double.valueOf(longtPlaces[i]));
-            marker = new MarkerOptions().position(location).title("PlacesToVisit");
+            marker = new MarkerOptions().position(location).title(getString(R.string.PlacesToVisit));
             BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.mipmap.ic_placestovisit);
             marker.icon(icon);
             mMap.addMarker(marker);

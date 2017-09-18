@@ -139,4 +139,25 @@
     <string name="title_Nightlife">Nightlife In Pune</string>
     <string name="title_activity_maps">Map</string>
     <string name="ImageView">ImageView</string>
+    <string name="activity">activity</string>
+    <string name="MapsActivity">MapsActivity</string>
+    <string name="latitudearray">latitudearray</string>
+    <string name="longitudearray">longitudearray</string>
+    <string name="HotelPosition">HotelPosition</string>
+    <string name="HotelName">HotelName</string>
+    <string name="HotelActivity">HotelActivity</string>
+    <string name="Pune">Pune</string>
+    <string name="RestaurantActivity">RestaurantActivity</string>
+    <string name="PlacesToVisitActivity">PlacesToVisitActivity</string>
+    <string name="NightLifeActivity">NightLifeActivity</string>
+    <string name="RestaurantPosition">RestaurantPosition</string>
+    <string name="RestaurantName">RestaurantName</string>
+    <string name="PlacePosition">PlacePosition</string>
+    <string name="PlaceName">PlaceName</string>
+    <string name="NightlifePosition">NightlifePosition</string>
+    <string name="NightlifeName">NightlifeName</string>
+    <string name="Hotels">Hotels</string>
+    <string name="Nightlife">Nightlife</string>
+    <string name="Restaurant">Restaurant</string>
+    <string name="PlacesToVisit">PlacesToVisit</string>
 </resources>

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolBar);
-        collapsingToolbarLayout.setTitle("Pune");
+        collapsingToolbarLayout.setTitle(getString(R.string.Pune));
         homeCardViewOptions = getResources().getStringArray(R.array.cardMenu);
         int count = 0;
         for (String Name : homeCardViewOptions) {

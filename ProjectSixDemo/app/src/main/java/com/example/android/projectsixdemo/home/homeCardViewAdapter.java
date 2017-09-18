@@ -96,9 +96,9 @@ public class homeCardViewAdapter extends RecyclerView.Adapter<homeCardViewAdapte
                     intent = new Intent(ctx, MapsActivity.class);
                     String[] homeCardViewOptionsLatitudes = ctx.getResources().getStringArray(R.array.latitudes);
                     String[] homeCardViewOptionsLongitudes = ctx.getResources().getStringArray(R.array.longitudes);
-                    intent.putExtra("activity", "MapsActivity");
-                    intent.putExtra("latitudearray", homeCardViewOptionsLatitudes);
-                    intent.putExtra("longitudearray", homeCardViewOptionsLongitudes);
+                    intent.putExtra(String.valueOf(R.string.activity), String.valueOf(R.string.MapsActivity));
+                    intent.putExtra(String.valueOf(R.string.latitudearray), homeCardViewOptionsLatitudes);
+                    intent.putExtra(String.valueOf(R.string.longitudearray), homeCardViewOptionsLongitudes);
                     ctx.startActivity(intent);
                     break;
                 default:

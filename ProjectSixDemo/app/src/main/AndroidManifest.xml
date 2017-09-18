@@ -36,15 +36,18 @@
         <activity
             android:name=".restaurant.RestaurantActivity"
             android:label="@string/title_Restaurants"
-            android:parentActivityName=".home.MainActivity" />
+            android:parentActivityName=".home.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".nightlife.NightLifeActivity"
             android:label="@string/title_Nightlife"
-            android:parentActivityName=".home.MainActivity" />
+            android:parentActivityName=".home.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".places.PlacesToVisitActivity"
             android:label="@string/title_activity_places_to_visit"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:parentActivityName=".home.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

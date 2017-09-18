@@ -15,7 +15,7 @@ import com.example.android.projectsixdemo.R;
 
 import java.util.ArrayList;
 
-public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHoder> {
+public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
 
     public ArrayList<Restaurant> mAlbum = new ArrayList<Restaurant>();
     Context ctx;
@@ -26,14 +26,14 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     }
 
     @Override
-    public RestaurantViewHoder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RestaurantViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotel_card_view, parent, false);
-        RestaurantViewHoder albumHolder = new RestaurantViewHoder(view, ctx, mAlbum);
+        RestaurantViewHolder albumHolder = new RestaurantViewHolder(view, ctx, mAlbum);
         return albumHolder;
     }
 
     @Override
-    public void onBindViewHolder(RestaurantViewHoder holder, int position) {
+    public void onBindViewHolder(RestaurantViewHolder holder, int position) {
         Restaurant album = mAlbum.get(position);
         holder.albumImageView.setImageResource(album.getImageId());
         holder.albumName.setText(album.getHotelName());
@@ -46,14 +46,14 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     }
 
 
-    public static class RestaurantViewHoder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class RestaurantViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView albumImageView;
         TextView albumName, rating;
         ArrayList<Restaurant> album = new ArrayList<Restaurant>();
         Context ctx;
 
-        public RestaurantViewHoder(View itemView, Context ctx, ArrayList<Restaurant> album) {
+        public RestaurantViewHolder(View itemView, Context ctx, ArrayList<Restaurant> album) {
             super(itemView);
             //register the onclick listener
             this.album = album;
@@ -69,9 +69,9 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
             int position = getAdapterPosition();
             Restaurant album = this.album.get(position);
             Intent intent = new Intent(ctx, MapsActivity.class);
-            intent.putExtra("RestaurantPosition", position);
-            intent.putExtra("RestaurantName", album.getHotelName());
-            intent.putExtra("activity", "RestaurantActivity");
+            intent.putExtra(String.valueOf(R.string.RestaurantPosition), position);
+            intent.putExtra(String.valueOf(R.string.RestaurantName), album.getHotelName());
+            intent.putExtra(String.valueOf(R.string.activity), String.valueOf(R.string.RestaurantActivity));
             ctx.startActivity(intent);
         }
     }
