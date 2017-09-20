@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HabitTrackerApp</string>
+    <string name="InsertSuccess">Data Inserted Successfully</string>
+</resources>
