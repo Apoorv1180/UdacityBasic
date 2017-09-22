@@ -169,8 +169,8 @@ public class DetailsActivity extends AppCompatActivity implements LoaderManager.
     private void emailSupplier() {
         String email = mInventorySupplierEmail.getText().toString();
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("*/*");
-        intent.putExtra(Intent.EXTRA_EMAIL, email);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_EMAIL,new String[]{ email} );
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {

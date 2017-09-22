@@ -54,7 +54,6 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
     String suppEmail;
     String suppPhone;
 
-
     private int mCategory = 0;
     private Uri mPickedImage;
     private static final int IMAGE_REQUEST_CODE = 108;
@@ -78,8 +77,10 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
         if (mCurrentProductUri == null) {
             setTitle(getString(R.string.add_inventory));
             invalidateOptionsMenu();
+
         } else {
             setTitle(getString(R.string.edit_inventory));
+
             //start loader to get data of lareasy existing product
             getLoaderManager().initLoader(1, null, this);
         }
@@ -206,16 +207,13 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
-
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         super.onPrepareOptionsMenu(menu);
-        if (mCurrentProductUri == null) {
             MenuItem menuItem = menu.findItem(R.id.action_delete);
             menuItem.setVisible(false);
-        }
         return true;
     }
 
