@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="array_category_options">
+        <item>@string/category_clothing</item>
+        <item>@string/category_electronics</item>
+        <item>@string/category_household</item>
+        <item>@string/category_others</item>
+    </string-array>
+</resources>

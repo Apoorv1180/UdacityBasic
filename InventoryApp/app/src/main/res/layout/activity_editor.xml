@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/inventory_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/empty_view_title"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_photo_camera_black_24dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/inventory_info"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+                <EditText
+                    android:id="@+id/inventory_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/inventory_name_hint"
+                    android:inputType="text" />
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/inventory_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/inventory_price"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/inventory_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/inventory_stock"
+                    android:inputType="number" />
+
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/inventory_supplier_info"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+                <EditText
+                    android:id="@+id/inventory_supplier_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/inventory_supplier_name"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/inventory_supplier_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawableStart="@drawable/ic_email_black_24dp"
+                    android:hint="@string/inventory_supplier_email"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/inventory_supplier_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableLeft="@drawable/ic_phone_black_24dp"
+                    android:drawableStart="@drawable/ic_phone_black_24dp"
+                    android:hint="@string/inventory_supplier_phone"
+                    android:inputType="phone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
