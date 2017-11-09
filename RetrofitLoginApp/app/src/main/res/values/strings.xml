@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="ProfileImage">Profile Image</string>
+    <string name="ViewMyApps">View Installed Apps</string>
+    <string name="logout">Logout</string>
+    <string name="profile_activity">My Profile</string>
+    <string name="view_my_apps">View My Apps</string>
+    <string name="pref_Filter">Filter Sys Apps</string>
+    <string name="userNameLabel">User Name</string>
+    <string name="userEmaillabel">User Email</string>
+    <string name="userBioLabel">Bio</string>
+</resources>
