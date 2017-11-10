@@ -1,13 +1,10 @@
 package com.example.android.mylogininformation.Models;
 
-/**
- * Created by shardulmohite on 10/11/17.
- */
-
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+//Creating POJO Class for data (metadata)
 public class Data {
 
     @SerializedName("username")
@@ -22,6 +19,8 @@ public class Data {
     @SerializedName("email")
     @Expose
     private String email;
+
+    //Setter and Getters
 
     public String getUsername() {
         return username;

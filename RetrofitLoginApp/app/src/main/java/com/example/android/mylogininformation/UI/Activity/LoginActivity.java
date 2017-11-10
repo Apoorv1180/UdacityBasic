@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -15,10 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.android.mylogininformation.Network.APIService;
-import com.example.android.mylogininformation.Network.ApiUtils;
 import com.example.android.mylogininformation.Models.Data;
 import com.example.android.mylogininformation.Models.Post;
+import com.example.android.mylogininformation.Network.APIService;
+import com.example.android.mylogininformation.Network.ApiUtils;
 import com.example.android.mylogininformation.R;
 
 import retrofit2.Call;
@@ -29,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     ProgressDialog progress;
-    private Button SubmitButton;
     private EditText userEmail, userPassword;
     private APIService mAPIService;
     private String strUserEmail, strUserPassword;
@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-// To dismiss the dialog
     }
 
     private void showProgressDialog() {
@@ -52,18 +51,17 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);showProgressDialog();
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-
+        setContentView(R.layout.activity_main);
+        showProgressDialog();
         // Get SharedPreferences
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         //Set UI
-        SubmitButton = (Button) findViewById(R.id.bt_submit);
-        userEmail = (EditText) findViewById(R.id.ed_username);
-        userPassword = (EditText) findViewById(R.id.ed_password);
+        Button submitButton = findViewById(R.id.bt_submit);
+        userEmail = findViewById(R.id.ed_username);
+        userPassword = findViewById(R.id.ed_password);
         mAPIService = ApiUtils.getAPIService();
 
         // get value from existing preference
-
         strUserEmail = sharedPreferences.getString("username", null);
         strUserPassword = sharedPreferences.getString("password", null);
 
@@ -72,12 +70,12 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             progress.dismiss();
         }
-        SubmitButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                    if (isNetworkConnected()) {
-                        strUserEmail = userEmail.getText().toString();
+                if (isNetworkConnected()) {
+                    strUserEmail = userEmail.getText().toString();
                     strUserPassword = userPassword.getText().toString();
                     if (!TextUtils.isEmpty(strUserEmail) && !TextUtils.isEmpty(strUserPassword)) {
                         showProgressDialog();
@@ -94,6 +92,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    //Handle the redirection after the response
     private void handleRedirection(Data data) {
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -105,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    //Checking Network Connectivity
     private boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
     private void sendPost(final String email, final String pass) {
         mAPIService.savePost(email, pass).enqueue(new Callback<Post>() {
             @Override
-            public void onResponse(Call<Post> call, Response<Post> response) {
+            public void onResponse(@NonNull Call<Post> call, @NonNull Response<Post> response) {
                 if (response.isSuccessful()) {
                     Log.i("API RESPONSE", "Data submitted to API." + response.body().getData());
                     Data data = response.body().getData();

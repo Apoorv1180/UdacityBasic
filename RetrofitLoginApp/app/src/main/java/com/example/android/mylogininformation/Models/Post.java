@@ -1,9 +1,9 @@
 package com.example.android.mylogininformation.Models;
 
-import com.example.android.mylogininformation.Models.Data;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+//Creating POJO Class for Post data
 public class Post {
 
     @SerializedName("meta")
@@ -13,6 +13,7 @@ public class Post {
     @Expose
     private Data data;
 
+    //Setter and Getter
     public String getMeta() {
         return meta;
     }

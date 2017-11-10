@@ -14,14 +14,12 @@ import com.example.android.mylogininformation.R;
 
 import java.util.List;
 
-/**
- * Created by Apoorv on 09-11-2017.
- */
 
 public class ApkAdapter extends BaseAdapter {
-    List<PackageInfo> packageList;
-    Activity context;
-    PackageManager packageManager;
+    //Using Package Manager to get the list of installed apps
+    private List<PackageInfo> packageList;
+    private Activity context;
+    private PackageManager packageManager;
 
     public ApkAdapter(Activity context, List<PackageInfo> packageList,
                       PackageManager packageManager) {
@@ -29,10 +27,6 @@ public class ApkAdapter extends BaseAdapter {
         this.context = context;
         this.packageList = packageList;
         this.packageManager = packageManager;
-    }
-
-    private class ViewHolder {
-        TextView apkName;
     }
 
     public int getCount() {
@@ -55,7 +49,7 @@ public class ApkAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.listrow, null);
             holder = new ViewHolder();
 
-            holder.apkName = (TextView) convertView.findViewById(R.id.appname);
+            holder.apkName = convertView.findViewById(R.id.appname);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -72,5 +66,9 @@ public class ApkAdapter extends BaseAdapter {
         holder.apkName.setText(appName);
 
         return convertView;
+    }
+
+    private class ViewHolder {
+        TextView apkName;
     }
 }

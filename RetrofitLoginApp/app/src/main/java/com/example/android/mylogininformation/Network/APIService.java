@@ -1,8 +1,5 @@
 package com.example.android.mylogininformation.Network;
 
-
-
-
 import com.example.android.mylogininformation.Models.Post;
 
 import retrofit2.Call;
@@ -10,9 +7,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-/**
- * Created by Apoorv on 09-11-2017.
- */
+// Creating APIService Interface for POST Request and passing email and password in the body
 
 public interface APIService {
     @POST("login/")

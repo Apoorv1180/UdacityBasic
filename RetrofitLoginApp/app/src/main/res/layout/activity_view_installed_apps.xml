@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_background"
     android:orientation="vertical"
     app:theme="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-    tools:context="com.example.android.mylogininformation.UI.Activity.ViewInstalledAppsActivity"
-    android:background="@drawable/login_background">
+    tools:context="com.example.android.mylogininformation.UI.Activity.ViewInstalledAppsActivity">
 
     <ListView
         android:id="@+id/applist"
         android:layout_width="match_parent"
-        android:dividerHeight="6dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/button_shape"
-        android:layout_height="wrap_content" />
+        android:dividerHeight="6dp" />
 
 
 </LinearLayout>

@@ -25,11 +25,13 @@ public class ViewInstalledAppsActivity extends AppCompatActivity {
         List<PackageInfo> packageList = packageManager
                 .getInstalledPackages(PackageManager.GET_PERMISSIONS);
 
-        //List<PackageInfo> packageList1 = new ArrayList<PackageInfo>();
-
-
-        apkList = (ListView) findViewById(R.id.applist);
+        apkList = findViewById(R.id.applist);
         apkList.setAdapter(new ApkAdapter(this, packageList, packageManager));
+
+        //For further functionality to view details of each app their revision etc
+        //the on click can be implemented
+        //And using the list view and another xml can be shown into ApkInfo
+
 //    @Override
 //    public void onItemClick(AdapterView<?> parent, View view, int position,
 //                            long row) {
